@@ -40,6 +40,12 @@ ItalicFont = Fontin-Italic.otf
 \hyphenation{im-pre-se}
 
 
+\usepackage{etoolbox}
+
+\providetoggle{cv}
+\settoggle{cv}{true}
+
+
 %--------------------BEGIN DOCUMENT----------------------
 \begin{document}
 
@@ -47,7 +53,13 @@ ItalicFont = Fontin-Italic.otf
 
 
 %--------------------TITLE-------------
-{\Huge Sandeep \textsc{Kumar}}\\\\
+\iftoggle{cv}{
+{\Huge Curriculum Vitae: Sandeep \textsc{Kumar}}
+}
+{
+{\Huge Sandeep \textsc{Kumar}}
+}\\
+
 \begin{tabular}{ll}
 %    \textsc{DOB:} &  19 September 1989 \\
     \textsc{email:}     &\href{mailto:sandeep.kumar@cse.iitd.ac.in}{sandeep.kumar@cse.iitd.ac.in} ,  \href{mailto:sandeep007734@gmail.com}{sandeep007734@gmail.com} \\
@@ -72,15 +84,14 @@ Security, Distributed and Parallel Systems, Operating Systems, Mobile Systems, I
 
 \input{tex_files/work_experience}
 
-
-%\input{certificates_training}
-
-%\input{talks}
-
-%\input{technical_skills}
+\iftoggle{cv}{
+\input{certificates_training}
+\input{talks}
+\input{technical_skills}
+\input{tex_files/interest}
+}{}
 
 \input{tex_files/references}
 
-%\input{tex_files/interest}
 
 \end{document}
