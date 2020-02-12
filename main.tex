@@ -53,17 +53,13 @@ ItalicFont = Fontin-Italic.otf
 
 
 %--------------------TITLE-------------
-\iftoggle{cv}{
-{\Huge Curriculum Vitae: Sandeep \textsc{Kumar}}
-}
-{
-{\Huge Sandeep \textsc{Kumar}}
-}\\
+{\Huge Sandeep \textsc{Kumar}}\\
 
 \begin{tabular}{ll}
 %    \textsc{DOB:} &  19 September 1989 \\
     \textsc{email:}     &\href{mailto:sandeep.kumar@cse.iitd.ac.in}{sandeep.kumar@cse.iitd.ac.in} ,  \href{mailto:sandeep007734@gmail.com}{sandeep007734@gmail.com} \\
-    \textsc{Home Page: }& \href{http://sandeep007734.github.io}{http://sandeep007734.github.io}
+%    \textsc{Home Page: }& \href{http://sandeep007734.github.io}{http://sandeep007734.github.io}
+    \textsc{Home Page: }& \href{http://www.cse.iitd.ernet.in/~kumarsandeep/}{http://www.cse.iitd.ernet.in/~kumarsandeep/}
 \end{tabular}
 
 
@@ -87,6 +83,17 @@ Security, Distributed and Parallel Systems, Operating Systems, Mobile Systems, I
 \iftoggle{cv}{
 \input{certificates_training}
 \input{talks}
+
+\section{Teaching experience}
+\begin{itemize}
+\item Cryptography [Fall 2017]
+\item Operating System [Spring 2018]
+\item Introduction to Computer Science [Fall 2018]
+\item Operating System [Spring 2018]
+\item Data structures [Fall 2019]
+\item Advanced Distributed Systems [Spring 2020]
+\end{itemize}
+
 \input{technical_skills}
 \input{tex_files/interest}
 }{}
