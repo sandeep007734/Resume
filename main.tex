@@ -3,7 +3,6 @@
 
 
 \usepackage{marvosym}
-
 \usepackage{xunicode}
 \usepackage{xltxtra}
 \usepackage{url,parskip} 	%other packages for formatting
@@ -55,10 +54,11 @@ ItalicFont = Fontin-Italic.otf
 {\Huge Sandeep \textsc{Kumar}}\\
 
 \begin{tabular}{ll}
-%    \textsc{DOB:} &  19 September 1989 \\
+    \textsc{DOB:} &  19 September 1989 \\
     \textsc{email:}     &\href{mailto:sandeep.kumar@cse.iitd.ac.in}{sandeep.kumar@cse.iitd.ac.in} ,  \href{mailto:sandeep007734@gmail.com}{sandeep007734@gmail.com} \\
 %    \textsc{Home Page: }& \href{http://sandeep007734.github.io}{http://sandeep007734.github.io}
-    \textsc{Home Page: }& \href{http://www.cse.iitd.ernet.in/~kumarsandeep/}{http://www.cse.iitd.ernet.in/~kumarsandeep/}
+    \textsc{Home Page: }& \href{http://www.cse.iitd.ernet.in/~kumarsandeep/}{http://www.cse.iitd.ernet.in/~kumarsandeep/} \\
+%\textsc{Contact: } & +91-8277361995
 \end{tabular}
 
 
@@ -82,17 +82,24 @@ Security, Distributed and Parallel Systems, Operating Systems, Mobile Systems, I
 
 \iftoggle{cv}{
 \input{certificates_training}
-\input{talks}
+%\input{talks}
 
 \section{Teaching experience}
-\begin{itemize}
-\item Advanced Distributed Systems [Spring 2020]
-\item Data structures [Fall 2019]
-\item Operating System [Spring 2019]
-\item Introduction to Computer Science [Fall 2018]
-\item Operating System [Spring 2018]
-\item Cryptography [Fall 2017]
-\end{itemize}
+\begin{tabular}{lr}
+Operating System & [Fall 2021], [Spring 2019], and [Spring 2018]\\
+Advanced Distributed Systems &[Spring 2020]  \\
+Data structures & [Fall 2019] \\
+Introduction to Computer Science & [Fall 2018]\\
+Cryptography &[Fall 2017] \\
+\end{tabular}
+%\begin{itemize}
+%\item Operating System [Spring 2019]
+%\item Advanced Distributed Systems [Spring 2020]
+%\item Data structures 
+%\item Introduction to Computer Science 
+%\item Operating System [Spring 2018]
+%\item Cryptography 
+%\end{itemize}
 
 \input{technical_skills}
 \input{tex_files/interest}
