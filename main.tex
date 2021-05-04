@@ -1,3 +1,5 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
 \documentclass[letter,10pt]{article}
 \usepackage[a4paper,bindingoffset=0.2in,left=2.0cm,right=2.0cm,top=1.5cm,bottom=1.5cm,footskip=.25in]{geometry}
 
@@ -66,19 +68,19 @@ ItalicFont = Fontin-Italic.otf
 
 %Section: Education
 \section{Education}
-\input{tex_files/education}
+\input{cv/education}
 
 \section{Research Interest}
 Security, Distributed and Parallel Systems, Operating Systems, Mobile Systems, IOT, Applied machine Learning.\\
 
 
-\input{tex_files/research_work}
+\input{cv/research_work}
 
-\input{tex_files/publications}
+\input{cv/publications}
 
-\input{tex_files/work_experience}
+\input{cv/work_experience}
 
-\input{tex_files/course_project} 
+\input{cv/course_project} 
 
 
 \iftoggle{cv}{
@@ -103,10 +105,10 @@ Cryptography &[Fall 2017] \\
 %\end{itemize}
 
 \input{technical_skills}
-\input{tex_files/interest}
+\input{cv/interest}
 }{}
 
-\input{tex_files/references}
+\input{cv/references}
 
 
 \end{document}
