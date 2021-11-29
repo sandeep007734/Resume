@@ -3,8 +3,9 @@
 % Awesome CV LaTeX Template for CV/Resume
 
 \documentclass[11pt, a4paper]{awesome-cv}
-\usepackage{xcolor}
+%\usepackage[dvipsnames]{xcolor}
 \usepackage{makecell}
+
 
 % Configure page margins with geometry
 \geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
@@ -54,9 +55,24 @@
 
 %\quote{``Be the change that you want to see in the world."}
 
+%\usepackage{hyperref}
+%\usepackage{tocloft}
 
-%-------------------------------------------------------------------------------
+%\renewcommand{\cftsubsecfont}{\normalfont\hypersetup{linkcolor=orange}}
+%\renewcommand{\cftsubsecafterpnum}{\hypersetup{linkcolor=green}}
+
+\usepackage{hyperref}
+\definecolor{navyblue}{rgb}{0.0, 0.0, 0.5}
+\hypersetup{
+	colorlinks   = true, %Colours links instead of ugly boxes
+    urlcolor     = navyblue, %Colour for external hyperlinks
+    linkcolor    = blue, %Colour of internal links 
+    citecolor    = red   %Colour of citations
+ }
+
 \begin{document}
+
+
 
 % Print the header with above personal informations
 % Give optional argument to change alignment(C: center, L: left, R: right)
@@ -85,7 +101,6 @@
 \input{cv/honors.tex}
 \input{cv/interests.tex}
 \input{cv/references.tex}
-%\input{cv/committees.tex}
 
 
 
