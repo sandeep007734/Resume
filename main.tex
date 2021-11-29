@@ -16,18 +16,15 @@
 % Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
 %                 awesome-nephritis, awesome-concrete, awesome-darknight
 \colorlet{awesome}{awesome-darknight}
-% Uncomment if you would like to specify your own color
- \definecolor{awesome}{HTML}{000000}
 
-% Colors for text
-% Uncomment if you would like to specify your own color
+\definecolor{awesome}{HTML}{000000}
 \definecolor{darktext}{HTML}{000000}
 \definecolor{text}{HTML}{000000}
-\definecolor{graytext}{HTML}{000000}
-\definecolor{lighttext}{HTML}{000000}
+%\definecolor{graytext}{HTML}{000000}
+%\definecolor{lighttext}{HTML}{000000}
 
 % Set false if you don't want to highlight section with awesome color
-\setbool{acvSectionColorHighlight}{true}
+\setbool{acvSectionColorHighlight}{false}
 
 % If you would like to change the social information separator from a pipe (|) to something else
 \renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
@@ -79,12 +76,12 @@
 %	Each section is imported separately, open each file in turn to modify content
 %-------------------------------------------------------------------------------
 \input{cv/education.tex}
-\input{cv/courses_taken}
-%\input{cv/research_interest.tex}
 \input{cv/publications.tex}
 \input{cv/experience.tex}
-%\newpage
 \input{cv/projects.tex}
+\input{cv/courses_taken}
+%\input{cv/research_interest.tex}
+%\newpage
 \input{cv/honors.tex}
 \input{cv/interests.tex}
 \input{cv/references.tex}
