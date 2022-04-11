@@ -4,13 +4,24 @@ then
 	exit 1
 fi
 
-hg add .
-git add .
-
-hg commit -m "$1" 
-hg push
-
 git config credential.helper store
 
+# hg pull
+# hg up
+
+git pull
+
+read -p "Pull done"
+git add . -n
+read -p "Commit?"
+
+
+# hg add .
+# hg addremove
+# hg commit -m "$1" 
+# hg push
+
+
+git add .
 git commit -m "$1"
 git push
