@@ -1,96 +1,204 @@
-%!TEX TS-program = xelatex
-%!TEX encoding = UTF-8 Unicode
-% Awesome CV LaTeX Template for CV/Resume
+%%%%%%%%%%%%%%%%%
+% This is an example CV created using altacv.cls (v1.1, 21 November 2016) written by
+% LianTze Lim (liantze@gmail.com), based on the 
+% Cv created by BusinessInsider at http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/?r=US&IR=T
+% 
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
 
-\documentclass[11pt, a4paper]{awesome-cv}
-\usepackage{xcolor}
-\usepackage{makecell}
+%% If you want to use \orcid or the
+%% academicons icons, add "academicons"
+%% to the \documentclass options. 
+%% Then compile with XeLaTeX or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+\documentclass[10pt,a4paper]{altacv}
 
-% Configure page margins with geometry
-\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
-
-% Specify the location of the included fonts
-\fontdir[fonts/]
-
-% Color for highlights
-% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
-%                 awesome-nephritis, awesome-concrete, awesome-darknight
-\colorlet{awesome}{awesome-darknight}
-% Uncomment if you would like to specify your own color
- \definecolor{awesome}{HTML}{000000}
-
-% Colors for text
-% Uncomment if you would like to specify your own color
-\definecolor{darktext}{HTML}{000000}
-\definecolor{text}{HTML}{000000}
-\definecolor{graytext}{HTML}{000000}
-\definecolor{lighttext}{HTML}{000000}
-
-% Set false if you don't want to highlight section with awesome color
-\setbool{acvSectionColorHighlight}{true}
-
-% If you would like to change the social information separator from a pipe (|) to something else
-\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+%% AltaCV uses the fontawesome and academicon fonts
+%% and packages. 
+%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols.
+%% When using the "academicons" option,
+%% Compile with LuaLaTeX for best results. If you
+%% want to use XeLaTeX, you may need to install
+%% Academicons.ttf in your operating system's font %% folder.
 
 
-%-------------------------------------------------------------------------------
-%	PERSONAL INFORMATION
-%	Comment any of the lines below if they are not required
-%-------------------------------------------------------------------------------
-% Available options: circle|rectangle,edge/noedge,left/right
-% \photo{profile.png}
-\name{Sandeep}{Kumar}
-\position{ Research Scientist @ Intel Labs, Bengaluru, India}
-\address{--}
+% Change the page layout if you need to
+\geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1cm,bottom=1cm}
 
-\mobile{(+91) 8277361995}
-\email{sandeep007734@gmail.com}
-\homepage{sandeep007734.github.io}
-\github{sandeep007734}
-\linkedin{sandeep007734}
-% \gitlab{gitlab-id}
-% \stackoverflow{SO-id}{SO-name}
-% \twitter{@twit}
-% \skype{skype-id}
-% \reddit{reddit-id}
-% \extrainfo{extra informations}
+% Change the font if you want to.
 
-%\quote{``Be the change that you want to see in the world."}
+% If using pdflatex:
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[default]{lato}
 
+% If using xelatex or lualatex:
+% \setmainfont{Lato}
 
-%-------------------------------------------------------------------------------
+% Change the colours if you want to
+\definecolor{VividPurple}{HTML}{2E64FE}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{heading}{VividPurple}
+\colorlet{accent}{VividPurple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+% \usepackage[fixed]{fontawesome5}
+\usepackage{url}
 \begin{document}
+\name{Sandeep Kumar}
+  \tagline{Research Scientist @ Intel Labs, Bangalore}
+% Cropped to square from https://en.wikipedia.org/wiki/Marissa_Mayer#/media/File:Marissa_Mayer_May_2014_(cropped).jpg, CC-BY 2.0
+\photo{5.5cm}{me}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \email{sandeep0077@gmail.com}
+%   \phone{000-00-0000}
+  \mailaddress{Bangalore, India}
+  \location{India}\\
+\homepage{sandeep007734.github.io}
+%  \linkedin{https://linkedin.com/in/sandeep007734}
+%   \github{} % I'm just making this up though.
+%   \orcid{orcid.org/0000-0000-0000-0000} % Obviously making this up too. If you want to use this field (and also other academicons symbols), add "academicons" option to \documentclass{altacv}
+}
 
-% Print the header with above personal informations
-% Give optional argument to change alignment(C: center, L: left, R: right)
+%% Make the header extend all the way to the right, if you want. Extend the right margin by 8cm (=6.8cm marginparwidth + 1.2cm marginparsep)
+\begin{adjustwidth}{}{-8cm}
 \makecvheader
+\end{adjustwidth}
 
-% Print the footer with 3 arguments(<left>, <center>, <right>)
-% Leave any of these blank if they are not needed
-\makecvfooter
-  {\today}
-%  {Sandeep Kumar~~~·~~~Curriculum Vitae}
-  {Sandeep Kumar}
-  {\thepage}
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+\cvsection[page1sidebar]{{\faListUl} Personal Details}
+
+% \cvevent{Undergraduate Researcher }{University of California, Merced}{Fall 2015 -- Ongoing}{Merced, CA}
+% \begin{itemize}
+% \item presented research regarding a possible cure for type I Diabetes-- focused on Potential for
+% \end{itemize}
 
 
+\cvachievement{\faBirthdayCake}{Date of Birth}{19$^{th}$- Nov. - 1989}
+\cvachievement{\faMap}{Place of Birth}{19$^{th}$- Nov. - 1989}
+\cvachievement{\faIcon{ruler-vertical}}{Height}{178cm (5' 8'')}
+\cvachievement{\faIcon{pray}}{Religion}{Hindu}
+\cvachievement{\faFlag}{Caste and Gotra}{-}
+
+% \begin{itemize}
+%     \item {\faBirthdayCake} Date of Birth: 19th- Sept. -9189
+%     \item {\faMap} Place of Birth: Asansol, West Bengal, India
+%     \item {\faRulerVertical} Height:
+%     \item {\faSun} Religion: Hinduism
+% \end{itemize}
+
+\divider
+
+\cvsection{{\faGraduationCap} Education}
 %-------------------------------------------------------------------------------
-%	CV/RESUME CONTENT
-%	Each section is imported separately, open each file in turn to modify content
+%	CONTENT
 %-------------------------------------------------------------------------------
-\input{cv/research_interest.tex}
-\input{cv/publications.tex}
-\input{cv/education.tex}
-\input{cv/experience.tex}
-%\newpage
-\input{cv/projects.tex}
-%\input{cv/honors.tex}
-\input{cv/interests.tex}
-\input{cv/references.tex}
-%\input{cv/committees.tex}
+\begin{cventries}
+\cvevent{Doctor of Philosophy}{Indian Institute of Technology Delhi}{2017 -- Ongoing}{New Delhi, India}
+
+\divider
+
+  \cvevent
+{Master of Engineering in Computer Science} % Degree
+{Indian Institute of Science } % Institution
+{Jul. 2011 - Aug. 2013} % Date(s)
+{Bangalore, India} % Location
+
+\divider
+
+\cvevent
+{Bachelor of Technology in Computer Science} % Degree
+{Guru Gobind Singh Indraprastha University } % Institution
+{Jul. 2007 - Aug. 2011} % Date(s)
+{New Delhi, India} % Location
+
+
+%---------------------------------------------------------
+\end{cventries}
+
+\cvsection{{\faBriefcase} Work Experience}
+\cvevent
+%{}{}
+    { Research Scientist} % Job title
+ {  Intel Labs} % Organization
+ {March 2022 --} % Date(s)
+    { Bangalore, Karnataka, India} % Location
+    
+   
+% \divider
+% \divider
+%   \cvevent
+% { Graduate Research Intern} % Job title
+%  {Intel Labs} % Organization
+%  {July 2020- Jan 2021} % Date(s)
+%      { Bangalore, Karnataka, India} % Location
+    
+    
+\divider
+
+%%---------------------------------------------------------
+  \cvevent
+    { Research Associate} % Job title
+ {   Indian Institute of Science} % Organization
+ {Sept 2014- July 2017} % Date(s)
+     { Bangalore, Karnataka, India} % Location
+    
+   
+\divider
+%---------------------------------------------------------
+\cvevent{Software Development Engineer}{Dell R\&D}{Jul 2013-Jun 2014}{ Bangalore, Karnataka, India}
+    
+   
 
 
 
+% \cvsection{A Day of My Life}
 
-%-------------------------------------------------------------------------------
+% \wheelchart{1.5cm}{0.5cm}{%
+%   10/13em/accent!30/Sleeping \& dreaming about research, 
+%   25/9em/accent!60/Attending Lectures \& Taking Notes,
+%   5/12em/accent!10/Programming \& Hacking, 
+%   20/12em/accent!40/Social Media,
+%   5/8em/accent!20/Group Study Sessions (Never too much studying!),
+%   30/9em/accent/Presenting Research or working on projects,
+%   5/8em/accent!20/Playing with my dog Max
+% }
+
+% \clearpage
+
+% \cvsection[page2sidebar]{Undergraduate Research}
+
+% \nocite{*}
+
+% \printbibliography[heading=pubtype,title={\printinfo{\faBook}{Review Articles}},type=book]
+
+% \divider
+
+% \printbibliography[heading=pubtype,title={\printinfo{\faFileTextO}{Course Articles}}, type=article]
+
+% \divider
+
+% \printbibliography[heading=pubtype,title={\printinfo{\faGroup}{Poster Presentations}},type=article]
+
 \end{document}
