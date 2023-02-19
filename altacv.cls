@@ -127,6 +127,14 @@
   \medskip
 }
 
+\newcommand{\moditem}[2]{%
+% {\Large\color{accent}#1} {\bfseries\textcolor{emphasis}{#2}}
+  \begin{tabularx}{\linewidth}{@{}p{2em} @{\hspace{1ex}} >{\raggedright\arraybackslash}X@{}}
+    \multirow{2}{*}{\Large\color{accent}#1} & \multirow{2}{*}{\bfseries\textcolor{emphasis}{#2}}
+  \end{tabularx}%
+  \smallskip
+}
+
 \newcommand{\cvachievement}[3]{%
   \begin{tabularx}{\linewidth}{@{}p{2em} @{\hspace{1ex}} >{\raggedright\arraybackslash}X@{}}
   \multirow{2}{*}{\Large\color{accent}#1} & \bfseries\textcolor{emphasis}{#2}\\
@@ -211,11 +219,11 @@
 
 \newenvironment{cvcolumn}[1]{\begin{minipage}[t]{#1}\raggedright}{\end{minipage}}
 
-\RequirePackage[backend=biber,style=authoryear]{biblatex}
-\defbibheading{pubtype}{\cvsubsection{#1}}
-\renewcommand{\bibsetup}{\vspace*{-\baselineskip}}
-\AtEveryBibitem{\makebox[\bibhang][l]{\itemmarker}}
-\setlength{\bibitemsep}{0.25\baselineskip}
+% \RequirePackage[backend=biber,style=authoryear]{biblatex}
+% \defbibheading{pubtype}{\cvsubsection{#1}}
+% \renewcommand{\bibsetup}{\vspace*{-\baselineskip}}
+% \AtEveryBibitem{\makebox[\bibhang][l]{\itemmarker}}
+% \setlength{\bibitemsep}{0.25\baselineskip}
 
 \AtBeginDocument{%
   \pagestyle{empty}

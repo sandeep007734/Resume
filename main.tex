@@ -1,7 +1,8 @@
+%!TEX TS-program = xelatex
 %% Then compile with XeLaTeX or LuaLaTeX.
 % \documentclass[10pt,a4paper,academicons]{altacv}
 \documentclass[10pt,a4paper]{altacv}
-
+\usepackage{hyperref}
 %% AltaCV uses the fontawesome and academicon fonts
 %% and packages. 
 %% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols.
@@ -39,7 +40,7 @@
 \renewcommand{\ratingmarker}{\faCircle}
 
 %% sample.bib contains your publications
-\addbibresource{sample.bib}
+% \addbibresource{sample.bib}
 
 % \usepackage[fixed]{fontawesome5}
 \usepackage{url}
@@ -51,11 +52,11 @@
 \personalinfo{%
   % Not all of these are required!
   % You can add your own with \printinfo{symbol}{detail}
-  \email{sandeep0077@gmail.com}
+  % \email{sandeep0077@gmail.com}
 %   \phone{000-00-0000}
-  \mailaddress{Bangalore, India}
-  \location{India}\\
-\homepage{sandeep007734.github.io}
+  % \mailaddress{}
+  \location{Bangalore, Karnataka, India}\\
+% \homepage{sandeedp007734.github.io}
 %  \linkedin{https://linkedin.com/in/sandeep007734}
 %   \github{} % I'm just making this up though.
 %   \orcid{orcid.org/0000-0000-0000-0000} % Obviously making this up too. If you want to use this field (and also other academicons symbols), add "academicons" option to \documentclass{altacv}
@@ -154,34 +155,7 @@
     
    
 
-
-
-% \cvsection{A Day of My Life}
-
-% \wheelchart{1.5cm}{0.5cm}{%
-%   10/13em/accent!30/Sleeping \& dreaming about research, 
-%   25/9em/accent!60/Attending Lectures \& Taking Notes,
-%   5/12em/accent!10/Programming \& Hacking, 
-%   20/12em/accent!40/Social Media,
-%   5/8em/accent!20/Group Study Sessions (Never too much studying!),
-%   30/9em/accent/Presenting Research or working on projects,
-%   5/8em/accent!20/Playing with my dog Max
-% }
-
-% \clearpage
-
-% \cvsection[page2sidebar]{Undergraduate Research}
-
-% \nocite{*}
-
-% \printbibliography[heading=pubtype,title={\printinfo{\faBook}{Review Articles}},type=book]
-
-% \divider
-
-% \printbibliography[heading=pubtype,title={\printinfo{\faFileTextO}{Course Articles}}, type=article]
-
-% \divider
-
-% \printbibliography[heading=pubtype,title={\printinfo{\faGroup}{Poster Presentations}},type=article]
+% \bibliographystyle{plain}
+% \bibliography{refs}
 
 \end{document}
