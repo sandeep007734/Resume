@@ -222,3 +222,5 @@ TSWLatexianTemp*
 *-tags.tex
 main.pdf
 .DS_Store
+main.tex
+main.xdv
