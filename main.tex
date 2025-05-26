@@ -6,16 +6,19 @@
 \usepackage{xcolor}
 \usepackage{makecell}
 
-% url link blue
+% Enable hyperlinks with proper colors
 \usepackage{hyperref}
-% \hypersetup{
-%     colorlinks=true,
-%     linkcolor=blue,
-%     filecolor=magenta,      
-%     urlcolor=blue,
-%     pdftitle={Awesome CV},
-%     pdfpagemode=FullScreen,
-%     }
+\hypersetup{
+    colorlinks=true,
+    linkcolor=awesome,
+    filecolor=awesome,      
+    urlcolor=awesome,
+    pdftitle={Sandeep Kumar - CV},
+    pdfauthor={Sandeep Kumar},
+    pdfsubject={Curriculum Vitae},
+    pdfkeywords={CV, Research, Computer Science},
+    pdfpagemode=FullScreen,
+}
 
 % Configure page margins with geometry
 \geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
@@ -66,7 +69,8 @@
 % \reddit{reddit-id}
 % \extrainfo{extra informations}
 
-%\quote{``Be the change that you want to see in the world."}
+% Add a professional quote
+% \quote{``Innovating at the intersection of research and technology to drive meaningful impact."}
 
 
 %-------------------------------------------------------------------------------
@@ -80,8 +84,7 @@
 % Leave any of these blank if they are not needed
 \makecvfooter
   {\today}
-%  {Sandeep Kumar~~~·~~~Curriculum Vitae}
-  {Sandeep Kumar}
+  {Sandeep Kumar~~~·~~~Curriculum Vitae}
   {\thepage}
 
 
@@ -91,17 +94,15 @@
 %-------------------------------------------------------------------------------
 \input{cv/research_interest.tex}
 \input{cv/publications.tex}
-\newpage
+\input{cv/patents.tex}
+% \newpage
 \input{cv/experience.tex}
 \input{cv/education.tex}
-% \newpage
-%\newpage
 % \input{cv/projects.tex}
-%\input{cv/honors.tex}
-% \newpage
+\input{cv/honors.tex}
 \input{cv/interests.tex}
 \input{cv/references.tex}
-%\input{cv/committees.tex}
+% \input{cv/committees.tex}
 
 
 
