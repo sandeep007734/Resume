@@ -1,0 +1,13 @@
+%% fontawesome6.sty - Wrapper to use fontawesome5 with FA6 command names
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{fontawesome6}[2026/01/11 fontawesome6 wrapper using fontawesome5]
+
+% Load the real fontawesome5 package from TeX Live
+\RequirePackage{fontawesome5}
+
+% Map FA6 icon names to FA5 equivalents
+\providecommand{\faHouseChimney}{\faHome}
+\providecommand{\faSquareGithub}{\faGithubSquare}
+\providecommand{\faCakeCandles}{\faBirthdayCake}
+\providecommand{\faXTwitter}{\faTwitter}
+\providecommand{\faSquareXing}{\faXingSquare}
