@@ -78,6 +78,8 @@
 % Needed to use icons from font-awesome
 \RequirePackage{fontawesome6}
 \RequirePackage{accsupp}
+% Default font directory (override via \fontdir before loading the class)
+\providecommand*{\@fontdir}{fonts/}
 \defaultfontfeatures{
   Renderer=HarfBuzz,
 }
@@ -98,7 +100,7 @@
   FontFace={l}{it}{Font=* Light Italic},
 ]
 \newfontfamily\roboto{Roboto}[
-  Path=fonts/,
+  Path=\@fontdir,
   Extension=.ttf,
   UprightFont=Roboto-Regular,
   ItalicFont=Roboto-Italic,
