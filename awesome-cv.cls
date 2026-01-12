@@ -48,6 +48,8 @@
 %-------------------------------------------------------------------------------
 % Needed to make fixed length table
 \RequirePackage{array}
+% Needed for the multirow command
+\RequirePackage{multirow}
 \RequirePackage{tabularx}
 % Needed to handle list environment
 \RequirePackage{enumitem}
@@ -780,6 +782,18 @@
     \ifstrempty{#5}
       {}
       {\multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}} \\}
+  \end{tabular*}%
+}
+
+% Define a three-item cv entry
+% Usage: \cventrythree{<title>}{<url>}{<description>}
+\newcommand*{\cventrythree}[3]{%
+  \vspace{-2.0mm}
+  \setlength\tabcolsep{0pt}
+  \setlength{\extrarowheight}{0pt}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 8cm} R{7.5cm}}
+    \entrytitlestyle{#1} & \multirow{2}{7.5cm}{\raggedleft\descriptionstyle{#3}} \\
+    {\fontsize{8pt}{1em}\bodyfont\color{graytext} #2} & \\
   \end{tabular*}%
 }
 

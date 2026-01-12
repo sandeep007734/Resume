@@ -3,7 +3,7 @@ RM     := /bin/rm -rf
 .PHONY: all clean
 
 all:
-	latexmk -xelatex -interaction=nonstopmode -file-line-error main.tex
+	xelatex -interaction=nonstopmode -file-line-error main.tex
 	cp main.pdf docs/sandeep.pdf
 
 clean:
