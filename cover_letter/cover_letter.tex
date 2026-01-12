@@ -1,60 +1,93 @@
-%!TEX TS-program = xelatex
-%!TEX encoding = UTF-8 Unicode
+  \documentclass[11pt, a4paper]{article}
+  \usepackage[left=2cm, top=1.5cm, right=2cm, bottom=1.8cm]{geometry}
+  \usepackage{xcolor}
+  \usepackage{hyperref}
+  \usepackage{soul}
 
-% Point to the shared fonts folder (evaluated while the class loads)
-\makeatletter
-\def\@fontdir{../fonts/}
-\makeatother
+  % Sans-serif font
+  % \renewcommand{\familydefault}{\sfdefault}
 
-\documentclass[11pt, a4paper]{awesome-cv}
-\usepackage{xcolor}
+  % Remove page numbers
+  \pagestyle{empty}
 
-% Page layout
-\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+  % Hyperlink setup
+  \hypersetup{
+      colorlinks=true,
+      linkcolor=black,
+      urlcolor=blue,
+      pdfborder={0 0 0}
+  }
 
-% Fonts are one level up (shared with resume)
-\fontdir[../fonts/]
+  \begin{document}
 
-% Mono-color palette (matches resume)
-\colorlet{awesome}{awesome-darknight}
-\definecolor{awesome}{HTML}{000000}
-\definecolor{darktext}{HTML}{000000}
-\definecolor{text}{HTML}{000000}
-\definecolor{graytext}{HTML}{000000}
-\definecolor{lighttext}{HTML}{000000}
+  % Header
+  \begin{center}
+  {\LARGE\bfseries Dr. Sandeep Kumar}\\[0.3em]
+  {\large Research Scientist @ Intel, Bengaluru, India}\\[0.5em]
+  \href{mailto:sandeep007734@gmail.com}{sandeep007734@gmail.com} | (+91) 8277361995\\
+  \href{https://sandeep007734.github.io}{sandeep007734.github.io} | 
+  \href{https://github.com/sandeep007734}{github.com/sandeep007734} | 
+  \href{https://linkedin.com/in/sandeep007734}{linkedin.com/in/sandeep007734}
+  \end{center}
 
-% Personal info (header)
-\name{Dr. Sandeep}{Kumar}
-\position{Research Scientist @ Intel, Bengaluru, India}
-\address{--}
-\mobile{(+91) 8277361995}
-\email{sandeep007734@gmail.com}
-\homepage{sandeep007734.github.io}
-\github{sandeep007734}
-\linkedin{sandeep007734}
+  \vspace{1em}
 
-% Letter metadata
-\recipient{Hiring Manager}{Example Labs\\123 Innovation Way\\Bengaluru, KA}
-\letterdate{\today}
-\lettertitle{Application for Research Scientist}
-\letteropening{Dear Hiring Manager,}
-\letterclosing{Sincerely,}
-\letterenclosure[Enclosure]{Curriculum Vitae}
+  % Letter details
+  \noindent\today
 
-\begin{document}
-\makecvheader
-\makelettertitle
+  % \vspace{1em}
 
-\begin{cvletter}
-  \lettersection{Why I'm Excited}
-  I thrive at the intersection of systems research and product delivery. At Intel Labs I prototype, evaluate, and iterate quickly, which aligns with Example Labs' pace and appetite for experimentation.
+  % \noindent Hiring Manager\\
+  % Example Labs\\
+  % 123 Innovation Way\\
+  % Bengaluru, KA
 
-  \lettersection{What I Bring}
-  My recent work focused on hardware-software co-design: profiling workloads, tuning memory hierarchies, and shipping tooling that reduces developer friction. I enjoy collaborating across research, firmware, and product teams to turn ideas into measurable wins.
+  % \vspace{1em}
 
-  \lettersection{What Success Looks Like}
-  In the first 90 days, I would pair with your platform team to identify one latency-critical path, build a reproducible benchmark, and prototype at least two design options with data-driven trade-offs.
-\end{cvletter}
+  % \noindent\textbf{Re: Application for Research Scientist}
 
-\makeletterclosing
-\end{document}
+  % \vspace{1em}
+
+  % \noindent Dear Hiring Manager,
+
+  \vspace{1em}
+
+% \noindent\textbf{Cover Letter}
+
+
+\section*{Cover Letter}
+
+\noindent
+\textbf{What I am excited?}\\
+The AI storm has taken the world by surprise, especially the rise of LLM models, which has caused both direct and indirect impacts on almost everyone on the planet. What interests me most are the technological challenges that come with training and inference of such models, particularly in the areas of computing and memory management. I believe this shift requires a ground-up change across almost all layers of modern computing and \ul{demands a highly optimized as well as flexible design that can adapt to the requirements of future models.}
+
+
+
+\vspace{1em}
+\noindent
+\textbf{What I Bring?}\\
+At Intel, I have led and mentored multiple projects focused on memory management and tiering for large-scale applications, including DNN training, LLM inference, RAG, virtualization, and key-value stores.
+% 
+This work involved engaging with the entire system stack—hardware architecture, the Linux kernel, device drivers, and user-space applications. The projects also required extensive use of profiling tools, such as hardware performance counters and various statistics exposed by the operating system. Interpreting these metrics demands a deep understanding of the internal workings of complex systems on modern servers.
+
+I believe this experience has prepared me to handle the wide range of challenges that arise along the way. I am also a passionate learner and am constantly looking for opportunities to broaden my horizons, whether for work or simply out of curiosity.
+
+\vspace{1em}
+\noindent
+\textbf{Collaborations and Team Player}\\
+I have collaborated closely with team members as well as with teams across Intel. I have also mentored multiple graduate-level interns and currently manage a small team of researchers working on projects related to upcoming memory technologies, LLMs, RAG, and virtualization. This work has resulted in multiple research papers published at top-tier conferences, as well as filed patents.
+
+
+  \vspace{2em}
+
+  \noindent Sincerely,
+
+  \vspace{2em}
+
+  \noindent Dr. Sandeep Kumar
+
+  \vspace{0.5em}
+
+  % \noindent\textit{Enclosure: Curriculum Vitae}
+
+  \end{document}
