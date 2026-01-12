@@ -1,12 +1,11 @@
 RM     := /bin/rm -rf
 
-all: 
-	xelatex main ; bibtex main; xelatex main; xelatex main ; 
-	$(RM)  *.log *.aux *.blg *.bbl *~* main.out *.synctex.gz 
-	cp main.pdf docs/sandeep.pdf
-	# evince docs/sandeep.pdf
-nobib: 
-	xelatex main ; xelatex main; xelatex main
+.PHONY: all clean
 
-clean: 
-	$(RM) *.dvi paper.ps *.log *.aux *.pdf *.blg *.bbl *~* main.out *.synctex.gz
+all:
+	latexmk -xelatex -interaction=nonstopmode -file-line-error main.tex
+	cp main.pdf docs/sandeep.pdf
+
+clean:
+	latexmk -C
+	$(RM) paper.ps *~*

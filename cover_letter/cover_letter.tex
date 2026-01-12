@@ -1,0 +1,60 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+% Point to the shared fonts folder (evaluated while the class loads)
+\makeatletter
+\def\@fontdir{../fonts/}
+\makeatother
+
+\documentclass[11pt, a4paper]{awesome-cv}
+\usepackage{xcolor}
+
+% Page layout
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Fonts are one level up (shared with resume)
+\fontdir[../fonts/]
+
+% Mono-color palette (matches resume)
+\colorlet{awesome}{awesome-darknight}
+\definecolor{awesome}{HTML}{000000}
+\definecolor{darktext}{HTML}{000000}
+\definecolor{text}{HTML}{000000}
+\definecolor{graytext}{HTML}{000000}
+\definecolor{lighttext}{HTML}{000000}
+
+% Personal info (header)
+\name{Dr. Sandeep}{Kumar}
+\position{Research Scientist @ Intel, Bengaluru, India}
+\address{--}
+\mobile{(+91) 8277361995}
+\email{sandeep007734@gmail.com}
+\homepage{sandeep007734.github.io}
+\github{sandeep007734}
+\linkedin{sandeep007734}
+
+% Letter metadata
+\recipient{Hiring Manager}{Example Labs\\123 Innovation Way\\Bengaluru, KA}
+\letterdate{\today}
+\lettertitle{Application for Research Scientist}
+\letteropening{Dear Hiring Manager,}
+\letterclosing{Sincerely,}
+\letterenclosure[Enclosure]{Curriculum Vitae}
+
+\begin{document}
+\makecvheader
+\makelettertitle
+
+\begin{cvletter}
+  \lettersection{Why I'm Excited}
+  I thrive at the intersection of systems research and product delivery. At Intel Labs I prototype, evaluate, and iterate quickly, which aligns with Example Labs' pace and appetite for experimentation.
+
+  \lettersection{What I Bring}
+  My recent work focused on hardware-software co-design: profiling workloads, tuning memory hierarchies, and shipping tooling that reduces developer friction. I enjoy collaborating across research, firmware, and product teams to turn ideas into measurable wins.
+
+  \lettersection{What Success Looks Like}
+  In the first 90 days, I would pair with your platform team to identify one latency-critical path, build a reproducible benchmark, and prototype at least two design options with data-driven trade-offs.
+\end{cvletter}
+
+\makeletterclosing
+\end{document}
