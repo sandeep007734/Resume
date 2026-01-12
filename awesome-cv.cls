@@ -549,6 +549,13 @@
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
           \faAlt{DoB: \@dateofbirth}{\faCakeCandles}{\@dateofbirth}%
         }%
+      \ifthenelse{\isundefined{\@dateofbirth}}%
+        {}%
+        {%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
+          % \mbox prevents wrapping of elements%
+          \mbox{\faBirthdayCake\acvHeaderIconSep\@dateofbirth}%
+        }%
       \ifthenelse{\isundefined{\@homepage}}%
         {}%
         {%
@@ -572,6 +579,12 @@
         {%
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
           \href{https://bitbucket.com/\@bitbucket}{\faAlt{BitBucket: @\@bitbucket}{\faBitbucket}{\@bitbucket}}%
+        }%
+      \ifthenelse{\isundefined{\@bitbucket}}%
+        {}%
+        {%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
+          \href{https://bitbucket.com/\@bitbucket}{\faBitbucket\acvHeaderIconSep\@bitbucket}%
         }%
       \ifthenelse{\isundefined{\@stackoverflowid}}%
         {}%
@@ -609,6 +622,12 @@
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
           \href{https://\@mastodoninstance/@\@mastodonname}{\faAlt{Mastodon: \@mastodonname{}@\@mastodoninstance}{\faMastodon}{\@mastodonname}}%
         }%
+      \ifthenelse{\isundefined{\@mastodonname}}%
+        {}%
+        {%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
+          \href{https://\@mastodoninstance/@\@mastodonname}{\faMastodon\acvHeaderIconSep\@mastodonname}%
+        }%
       \ifthenelse{\isundefined{\@skype}}%
         {}%
         {%
@@ -626,6 +645,12 @@
         {%
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
           \href{https://www.researchgate.net/profile/\@researchgate}{\faAlt{ResearchGate: \@researchgate}{\faResearchgate}{\@researchgate}}%
+        }%
+      \ifthenelse{\isundefined{\@researchgate}}%
+        {}%
+        {%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
+          \href{https://www.researchgate.net/profile/\@researchgate}{\faResearchgate\acvHeaderIconSep\@researchgate}%
         }%
       \ifthenelse{\isundefined{\@xing}}%
         {}%
@@ -656,6 +681,24 @@
         {%
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
           \href{https://t.me/\@telegram}{\faAlt{Telegram: \@telegram}{\faTelegram}{\@telegram}}%
+        }%
+      \ifthenelse{\isundefined{\@kaggle}}%
+        {}%
+        {%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
+          \href{https://kaggle.com/\@kaggle}{\faKaggle\acvHeaderIconSep\@kaggle}%
+        }%
+      \ifthenelse{\isundefined{\@hackerrank}}%
+        {}%
+        {%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
+          \href{https://www.hackerrank.com/\@hackerrank}{\faHackerrank\acvHeaderIconSep\@hackerrank}%
+        }%
+      \ifthenelse{\isundefined{\@telegram}}%
+        {}%
+        {%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
+          \href{https://t.me/\@telegram}{\faTelegram\acvHeaderIconSep\@telegram}%
         }%
       \ifthenelse{\isundefined{\@googlescholarid}}%
         {}%
