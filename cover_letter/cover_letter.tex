@@ -1,4 +1,4 @@
-  \documentclass[11pt, a4paper]{article}
+  \documentclass[10pt, a4paper]{article}
   \usepackage[left=2cm, top=1.5cm, right=2cm, bottom=1.8cm]{geometry}
   \usepackage{xcolor}
   \usepackage{hyperref}
@@ -10,7 +10,7 @@
   % Remove page numbers
   \pagestyle{empty}
 
-  % Hyperlink setup
+  % Hyperlink setups
   \hypersetup{
       colorlinks=true,
       linkcolor=black,
@@ -19,6 +19,13 @@
   }
 
   \begin{document}
+
+  % Slightly tighter spacing to fit one page
+  \setlength{\parskip}{0pt}
+  \setlength{\parindent}{0pt}
+  \setlength{\itemsep}{0.2em}
+  \setlength{\topsep}{0.2em}
+  \setlength{\partopsep}{0pt}
 
   % Header
   \begin{center}
@@ -30,7 +37,7 @@
   \href{https://linkedin.com/in/sandeep007734}{linkedin.com/in/sandeep007734}
   \end{center}
 
-  \vspace{1em}
+  \vspace{0.6em}
 
   % Letter details
   \noindent\today
@@ -50,7 +57,7 @@
 
   % \noindent Dear Hiring Manager,
 
-  \vspace{1em}
+  \vspace{0.6em}
 
 % \noindent\textbf{Cover Letter}
 
@@ -58,31 +65,38 @@
 \section*{Cover Letter}
 
 \noindent
-\textbf{What I am excited?}\\
-The AI storm has taken the world by surprise, especially the rise of LLM models, which has caused both direct and indirect impacts on almost everyone on the planet. What interests me most are the technological challenges that come with training and inference of such models, particularly in the areas of computing and memory management. I believe this shift requires a ground-up change across almost all layers of modern computing and \ul{demands a highly optimized as well as flexible design that can adapt to the requirements of future models.}
+\textbf{Why I'm excited about this role}\\
+I am excited by the engineering challenges at the intersection of large-scale model training/inference and high-performance systems—especially making multimodal LLMs fast, reliable, and cost-efficient on highly interconnected GPU clusters. I enjoy work that requires tight feedback loops between profiling, algorithmic choices, and low-level systems optimization.
 
 
 
-\vspace{1em}
+\vspace{0.6em}
 \noindent
-\textbf{What I Bring?}\\
-At Intel, I have led and mentored multiple projects focused on memory management and tiering for large-scale applications, including DNN training, LLM inference, RAG, virtualization, and key-value stores.
-% 
-This work involved engaging with the entire system stack—hardware architecture, the Linux kernel, device drivers, and user-space applications. The projects also required extensive use of profiling tools, such as hardware performance counters and various statistics exposed by the operating system. Interpreting these metrics demands a deep understanding of the internal workings of complex systems on modern servers.
+\textbf{Relevant experience I bring}\\
+I am a systems researcher and performance-focused software engineer at Intel Labs, working on AI/ML efficiency with a particular focus on memory behavior (memory tiering for LLMs and RAG systems) and production-grade systems work (including upstream Linux kernel memory-management contributions). I regularly profile and debug across the stack (OS/kernel, drivers/accelerators, userspace) and use telemetry to translate bottlenecks into targeted optimizations.
 
-I believe this experience has prepared me to handle the wide range of challenges that arise along the way. I am also a passionate learner and am constantly looking for opportunities to broaden my horizons, whether for work or simply out of curiosity.
+I have hands-on experience integrating and tuning hardware accelerators (Intel IAA/DSA) for real workloads, and I am comfortable making kernel- and driver-adjacent changes when those are the source of performance or correctness issues. During my PhD, I also worked on low-level systems around Intel SGX (e.g., enclave performance/benchmarking and OS-facing mechanisms), which strengthened my ability to debug across privilege boundaries.
 
-\vspace{1em}
+I build and optimize Python-based AI workflows (including PyTorch training/inference) and go deeper, when needed, into native code and systems configuration. For DNN training, I have worked directly with PyTorch-based training code, including profiling/instrumentation and targeted changes to reduce memory pressure and improve efficiency. I am comfortable reasoning about distributed execution fundamentals and excited to apply that to GPU-centric stacks (e.g., PyTorch Distributed with NCCL) and modern large-scale training/inference frameworks.
+
+\vspace{0.6em}
 \noindent
-\textbf{Collaborations and Team Player}\\
-I have collaborated closely with team members as well as with teams across Intel. I have also mentored multiple graduate-level interns and currently manage a small team of researchers working on projects related to upcoming memory technologies, LLMs, RAG, and virtualization. This work has resulted in multiple research papers published at top-tier conferences, as well as filed patents.
+\textbf{How I would contribute in your stack}\\
+\begin{itemize}
+  \item \textbf{Scale-out training:} Improve parallel efficiency by profiling communication/memory bottlenecks and validating scaling strategies with rigorous measurement.
+  \item \textbf{High-throughput inference:} Tune multimodal LLM serving for throughput and tail latency, leveraging my experience optimizing LLM inference and RAG systems.
+  \item \textbf{Deep performance work:} Debug and optimize low-level behavior (kernels, drivers, OS configuration) to remove system bottlenecks.
+\end{itemize}
+
+\noindent
+I would welcome the opportunity to discuss how my systems performance background in AI infrastructure can help you push the boundaries of what is computationally possible.
 
 
-  \vspace{2em}
+  \vspace{1.4em}
 
   \noindent Sincerely,
 
-  \vspace{2em}
+  \vspace{1.4em}
 
   \noindent Dr. Sandeep Kumar
 

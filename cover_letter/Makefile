@@ -4,7 +4,7 @@ RM     := /bin/rm -rf
 
 all:
 	TEXINPUTS=..:$(TEXINPUTS) latexmk -xelatex -interaction=nonstopmode -file-line-error cover_letter.tex
-	cp cover_letter.pdf ../docs/cover_letter.pdf
+	cp cover_letter.pdf ../docs/sandeep_cover_letter.pdf
 
 clean:
 	latexmk -C

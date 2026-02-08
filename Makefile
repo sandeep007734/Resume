@@ -4,7 +4,7 @@ RM     := /bin/rm -rf
 
 all:
 	xelatex -interaction=nonstopmode -file-line-error main.tex
-	cp main.pdf docs/sandeep.pdf
+	cp main.pdf docs/sandeep_cv_latest.pdf
 
 clean:
 	latexmk -C
